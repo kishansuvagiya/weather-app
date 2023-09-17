@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.W_container {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(2, 2, 2, 0.6), rgba(0, 0, 0, 0.5)),
+        url("https://cdn.pixabay.com/photo/2018/05/30/15/39/thunderstorm-3441687_1280.jpg") fixed center center;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    color: #fff;
+    padding: 2rem;
+    height: 100vh;
+}
+
+.weather__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.weather__search input {
+    border: none;
+    background: #0C356A;
+    outline: none;
+    color: #fff;
+    padding: 0.5rem 2.5rem;
+    border-radius: 5px;
+    width: 25rem;
+}
+
+.weather__search input::placeholder {
+    color: #fff;
+}
+
+.weather__search {
+    position: relative;
+}
+
+.weather__search i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.weather__body {
+    text-align: center;
+    margin-top: 4rem;
+}
+.weather__city{
+    font-size: 44px;
+}
+.weather__datetime {
+    margin-bottom: 2rem;
+    font-size: 14px;
+}
+
+.weather__forecast {
+    background: #0C356A;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+}
+
+.weather__icon img {
+    width: 100px;
+    position: relative;
+    animation: mymove 3s linear infinite alternate;
+   
+}
+
+@keyframes mymove {
+    from {left: -50px;}
+    to {left: 50px;}
+  }
+
+.weather__temperature {
+    font-size: 1.75rem;
+}
+
+.weather__minmax {
+    display: flex;
+    justify-content: center;
+}
+
+.weather__minmax p {
+    font-size: 16px;
+    margin: 0.5rem;
+}
+
+.weather__info {
+    display: grid;
+    grid-gap: 1rem;
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.weather__card {
+    display: flex;
+    align-items: center;
+    background: #0C356A;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.weather__card i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.weather__card p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+@media(max-width: 767px) {
+    .weather__info {
+        margin-top: 3rem;
+    }
+
+    .W_container {
+        height: 100%;
+    }
+    .weather__header{
+        display: block;
+    }
+    .weather__units{
+        margin-top: 40px;
+        margin-left: 11rem;
+    }
+    .weather__search input {
+        width: 20rem;
+    }
+}
+
+/* -------- toggle button css --------------- */
+.toggle-button-cover {
+    position: relative;
+  }
+  
+  .toggle-button-cover .button-cover,
+  .toggle-button-cover .knobs,
+  .toggle-button-cover .layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .toggle-button-cover .button {
+    position: relative;
+    top: 50%;
+    width: 74px;
+    height: 36px;
+    margin: -20px 0 0 -40px;
+    overflow: hidden;
+  }
+  
+  .toggle-button-cover .button.r,
+  .toggle-button-cover .button.r .layer {
+    border-radius: 100px;
+  }
+  
+  .toggle-button-cover .button.b2 {
+    border-radius: 2px;
+  }
+  
+  .toggle-button-cover .checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .toggle-button-cover .knobs {
+    z-index: 2;
+  }
+  
+  .toggle-button-cover .layer {
+    width: 100%;
+    background-color: #bce6f8;
+    transition: 0.3s ease all;
+    z-index: 1;
+  }
+  
+  /* Button 1 */
+  .toggle-button-cover #button-1 .knobs:before {
+    content: "°C";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 7px 0px;
+    background-color: #0C356A;
+    border-radius: 50%;
+    transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+  }
+  
+  .toggle-button-cover #button-1 .checkbox:checked + .knobs:before {
+    content: "°F";
+    left: 41px;
+    background-color: #f71a0a;
+  }
+  
+  .toggle-button-cover #button-1 .checkbox:checked ~ .layer {
+    background-color: #fcc9c9;
+  }
+  
+  .toggle-button-cover #button-1 .knobs,
+  .toggle-button-cover #button-1 .knobs:before,
+  .toggle-button-cover #button-1 .layer {
+    transition: 0.3s ease all;
+  }
+
+  /* -------- toggle button css --------------- */
