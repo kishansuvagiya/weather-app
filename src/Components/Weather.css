@@ -136,6 +136,50 @@
         width: 20rem;
     }
 }
+@media(max-width: 425px) {
+    .weather__search input {
+        width: 20rem;
+        margin-left: -28px;
+    }
+    .weather__search i {
+        position: absolute;
+        left: -12px;
+        top: 12px;
+        font-size: 15px;
+        color: #fff;
+    }
+    .weather__units{
+        margin-top: 40px;
+        margin-left: 8rem;
+    }
+}
+@media(max-width: 375px) {
+    .weather__search input {
+        width: 19rem;
+        margin-left: -44px;
+    }
+    .weather__search i {
+        position: absolute;
+        left: -32px;
+        top: 12px;
+        font-size: 15px;
+        color: #fff;
+    }
+    .weather__units{
+        margin-top: 40px;
+        margin-left: 7rem;
+    }
+}
+@media(max-width: 320px) {
+    .weather__search input {
+        width: 17rem;
+        margin-left: -44px;
+    }
+    .weather__units{
+        margin-top: 40px;
+        margin-left: 6rem;
+    }
+}
 
 /* -------- toggle button css --------------- */
 .toggle-button-cover {
